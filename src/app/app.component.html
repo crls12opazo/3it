@@ -1,0 +1,33 @@
+<ion-app>
+  <ion-split-pane contentId="menuContent">
+    <ion-menu [swipeGesture]="true" side="start" contentId="menuContent">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>
+            
+          </ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item routerLink="./home">
+            <ion-icon name="home" slot="start"></ion-icon>
+            Home
+          </ion-item>
+       
+         
+        </ion-list>
+        <div class="version">
+          
+        </div>
+      </ion-content>
+      <ion-footer>
+        <ion-toolbar color="light">
+          <ion-title>
+          </ion-title>
+        </ion-toolbar>
+      </ion-footer>
+    </ion-menu>
+    <ion-router-outlet id="menuContent"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

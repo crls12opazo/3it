@@ -1,0 +1,59 @@
+
+export class Indicador implements IIndicador {
+    version:string;
+    autor:string;
+    fecha:string;
+    uf:any;
+    ivp:any;
+    dolar:any;
+    dolar_intercambio:any;
+    euro:any;
+    ipc:any;
+    utm:any;
+    imacec:any;
+    tpm:any;
+    libra_cobre:any;
+    tasa_desempleo:any;
+    bitcoin:any;
+    /**
+     *
+     */
+    constructor(data?:IIndicador) {
+         if(data){
+              this.version=data.version;
+              this.autor=data.autor;
+              this.fecha=data.fecha;
+              this.dolar=data.dolar;
+              this.uf=data.uf;
+              this.ivp=data.ivp;
+              this.dolar=data.dolar;
+              this.dolar_intercambio=data.dolar_intercambio;
+              this.euro=data.euro;
+              this.ipc=data.ipc;
+              this.utm=data.utm;
+              this.imacec=data.imacec;
+              this.tpm=data.tpm;
+              this.libra_cobre=data.libra_cobre;
+              this.tasa_desempleo=data.tasa_desempleo;
+              this.bitcoin=data.bitcoin
+         }
+        
+    }
+}
+interface IIndicador{
+    version:string;
+    autor:string;
+    fecha:string;
+    uf:any;
+    ivp:any;
+    dolar:any;
+    dolar_intercambio:any;
+    euro:any;
+    ipc:any;
+    utm:any;
+    imacec:any;
+    tpm:any;
+    libra_cobre:any;
+    tasa_desempleo:any;
+    bitcoin:any;
+}

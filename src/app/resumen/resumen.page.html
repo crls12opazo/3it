@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+    
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <h1 class="titulo">{{divisaNombre}}</h1>
+      <h3 class="fecha">{{divisaFecha}}</h3>
+      <h2 class="valor">{{divisaValor}}</h2>
+      <ion-badge class="badge" color="medium">{{divisaUnidad}}</ion-badge>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="chart">
+    <ion-card-content>
+      <canvas class="chartjs" baseChart [datasets]="chartData" [chartType]="chartType" [labels]="chartLabels" ></canvas>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
