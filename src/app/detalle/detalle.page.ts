@@ -14,6 +14,7 @@ export class DetallePage  {
   divisaNombre:string;
   divisa:Divisa;
   series:Serie[]=[];
+  signo:string="$";
   constructor(private storageService: StorageService,private appService: AppService) { this.getDivisa(); }
 
   ngOnInit() {
@@ -23,7 +24,9 @@ export class DetallePage  {
   async getDivisa(){
     this.divisa=await this.storageService.get('Divisa');
     this.divisaNombre=this.divisa.nombre;
-
+    if(this.divisa.unidad_medida==='Porcentaje'){
+      this.signo="%";
+    }
     this.appService.getPosts(this.divisa.codigo).then(data=>{
       let indicadores:any=data;
       console.log(data['serie']);
